@@ -1,0 +1,53 @@
+let randInt = Math.floor(Math.random() * 3);
+let input = "scissor"
+
+function compOutput(randInt) {
+  switch (randInt) {
+  case 0: 
+  console.log("rock")
+  break;
+  case 1: 
+  console.log("paper")
+  break;
+  case 2: 
+  console.log("scissor")
+  break;
+    }
+}
+
+let x = compOutput(randInt)
+
+function compileSwitch(x, input){
+  
+    switch (x, input){
+        case (x === "rock", "rock"):
+            console.log("You have tied!!1");
+            break;
+        case (x === "rock",  "paper"):
+            console.log("You have won!!1");
+            break;
+        case (x === "rock","scissor"):
+            console.log("You have lost!!1")
+            break;
+        case (x === "paper", "rock"):
+            console.log("You have lost!!2");
+            break;
+        case (x === "paper", "paper"):
+            console.log("You have tied!!2");
+            break;
+        case (x === "paper", "scissor"):
+            console.log("You have won!!2")
+            break;
+        case (x === "scissor",  "rock"):
+            console.log("You have won!!3");
+            break;
+        case (x === "scissor", "paper"):
+            console.log("You have lost!!3");
+            break;
+        case (x === "scissor","scissor"):
+            console.log("You have tied!!3")
+            break;
+    }
+}
+
+let final = compileSwitch(x, input);

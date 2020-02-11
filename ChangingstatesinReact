@@ -1,0 +1,32 @@
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+
+function App() {
+  const [textSwitch, setTextSwitch] = useState(true);
+  return (
+    <div>
+    <button onClick={() => setTextSwitch(!textSwitch)} type="button"> switch
+    </button>
+    <Greeting text={textSwitch} />
+    </div>
+    
+  );
+}
+function Greeting(props) {
+  console.log(props.text);
+  if (props.text) {
+    return (
+      <p>
+        Hello This is the first state -- true.
+      </p>
+    );
+  }
+  return (
+    <p>
+        Hello This is the first state -- false.
+    </p>
+  );
+}
+
+
+ReactDOM.render(<App />, document.getElementById("root"));
